@@ -1,0 +1,37 @@
+<!-- @format -->
+
+<html lang="en">
+  <head>
+    <title>Document -2</title>
+  </head>
+
+  <body>
+    <p>First No</p>
+    <input id="num1" type="number" />
+    <p>Second No</p>
+
+    <input id="num2" type="number" />
+
+    <button onclick="sum()">Add</button>
+
+    <p>Output <span id="output"></span></p>
+
+    <script>
+      const number1 = document.getElementById("num1");
+
+      const number2 = document.getElementById("num2");
+
+      const output = document.getElementById("output");
+
+      console.log("output", output);
+
+      function sum() {
+        console.log("sum is called");
+
+        output.innerHTML = +number1.value + +number2.value;
+      }
+    </script>
+
+    <!-- <script src="script.js"></script> -->
+  </body>
+</html>

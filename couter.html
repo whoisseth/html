@@ -1,0 +1,45 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>counter app</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="p-8 flex items-center justify-center flex-col">
+    <p id="output" class="mb-10">0</p>
+
+    <div class="flex gap-3">
+      <button
+        onclick="Incremnt()"
+        id="addBtn"
+        class="px-2 py-1 rounded bg-gray-400"
+      >
+        Add +
+      </button>
+
+      <button
+        onclick="Decremnt()"
+        id="minusBtn"
+        class="px-2 py-1 rounded bg-gray-400"
+      >
+        Minus -
+      </button>
+    </div>
+
+    <script>
+      const output = document.getElementById("output");
+
+      let countValue = 0;
+
+      function Incremnt() {
+        countValue = countValue + 1;
+        output.innerHTML = countValue;
+      }
+      function Decremnt() {
+        countValue = countValue - 1;
+        output.innerHTML = countValue;
+      }
+    </script>
+  </body>
+</html>
